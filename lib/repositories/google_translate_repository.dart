@@ -35,7 +35,7 @@ class GoogleTranslateReopsitory {
     });
   }
 
-  Future<String> translate({
+  Future<Map<String,dynamic>> translate({
     required String text,
     String? source,
     required String target,
@@ -66,6 +66,6 @@ class GoogleTranslateReopsitory {
     } catch (e) {
       debugPrint(e.toString());
     }
-    return text;
+    return response.data['data'];
   }
 }
