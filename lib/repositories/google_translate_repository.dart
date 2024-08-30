@@ -62,10 +62,12 @@ class GoogleTranslateReopsitory {
         debugPrint(response.data["data"].toString());
         debugPrint(response.data["data"]['translations'].toString());
         text = response.data["data"]?["translations"].first["translatedText"];
+         return response.data['data'];
       }
+      return {};
     } catch (e) {
       debugPrint(e.toString());
     }
-    return response.data['data'];
+    return {};
   }
 }
