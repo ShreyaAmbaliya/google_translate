@@ -43,7 +43,7 @@ class GoogleTranslate {
   }) : _reopsitory = GoogleTranslateReopsitory(cacheDuration: cacheDuration);
 
   // Translate your text from source to target language
-  Future<String> translate(
+  Future<Map<String,dynamic>> translate(
     String text, {
     String? sourceLanguage,
     String? targetLanguage,
