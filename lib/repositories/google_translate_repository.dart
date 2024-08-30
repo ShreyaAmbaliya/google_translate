@@ -57,7 +57,10 @@ class GoogleTranslateReopsitory {
 
       if ((response.statusCode == 200 || response.statusCode == 304) &&
           response.data?["data"]?["translations"] != null &&
-          response.data["data"]?["translations"]?.length > 0) {
+          response.data["data"]?["translations"]?.length > 0) { 
+        debugPrint("internal call===");
+        debugPrint(response.data["data"].toString());
+        debugPrint(response.data["data"]['translations'].toString());
         text = response.data["data"]?["translations"].first["translatedText"];
       }
     } catch (e) {
